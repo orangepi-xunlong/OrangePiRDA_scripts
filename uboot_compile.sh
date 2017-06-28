@@ -10,6 +10,7 @@ OUTPUT=${ROOT}/output
 clear
 #make -C ${UBOOT} CROSS_COMPILE=${TOOL} clean 
 echo -e "\e[1;31m Configure OrangePi 2G-IOT or i96 \e[0m"
+make -s -C ${UBOOT} CROSS_COMPILE=${TOOL} clean 
 make -s -C ${UBOOT} CROSS_COMPILE=${TOOL} rda8810_config
 echo -e "\e[1;31m Compiling Uboot \e[0m"
 make -s -C ${UBOOT} CROSS_COMPILE=${TOOL} 
