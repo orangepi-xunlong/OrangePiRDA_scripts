@@ -95,23 +95,23 @@ if [ ! -d $ROOT/output ]; then
     mkdir -p $ROOT/output
 fi
 
-MENUSTR="Welcome to OrangePi Build System. Pls choose Platform."
+#MENUSTR="Welcome to OrangePi Build System. Pls choose Platform."
 ##########################################
-OPTION=$(whiptail --title "OrangePi Build System" \
-	--menu "$MENUSTR" 10 60 2 --cancel-button Exit --ok-button Select \
-	"0"  "OrangePi 2G-IOT" \
-	"1"  "OrangePi i96" \
-	3>&1 1>&2 2>&3)
+#OPTION=$(whiptail --title "OrangePi Build System" \
+#	--menu "$MENUSTR" 10 60 2 --cancel-button Exit --ok-button Select \
+#	"0"  "OrangePi 2G-IOT" \
+#	"1"  "OrangePi i96" \
+#	3>&1 1>&2 2>&3)
 
-if [ $OPTION = "0" ]; then
-	export PLATFORM="OrangePi_2G-IOT"
-elif [ $OPTION = "1" ]; then
-	export PLATFORM="OrangePi_i96"
-else
-	echo -e "\e[1;31m Pls select correct platform \e[0m"
-	exit 0
-fi
-
+#if [ $OPTION = "0" ]; then
+#	export PLATFORM="OrangePi_2G-IOT"
+#elif [ $OPTION = "1" ]; then
+#	export PLATFORM="OrangePi_i96"
+#else
+#	echo -e "\e[1;31m Pls select correct platform \e[0m"
+#	exit 0
+#fi
+export PLATFORM="OrangePi_2G-IOT"
 ##########################################
 ## Root Password check
 for ((i = 0; i < 5; i++)); do

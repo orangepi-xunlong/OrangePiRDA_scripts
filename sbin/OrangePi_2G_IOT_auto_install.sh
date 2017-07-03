@@ -8,5 +8,5 @@ fi
 
 apt-get -y --no-install-recommends --fix-missing install \
         gcc make vim git whiptail libjpeg8-dev \
-	alsa-utils ppp wvdial ca-certificates 
+	alsa-utils ppp wvdial ca-certificates lib6c-dev 
 
